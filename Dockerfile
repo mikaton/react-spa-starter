@@ -1,11 +1,12 @@
-FROM node:15.1.0-alpine
+FROM node:current-alpine
+
 WORKDIR /app
+
+# to use local npm modules instead of installing globally
 ENV PATH /app/node_modules/.bin:$PATH
 
-COPY package.json ./
-COPY package-lock.json ./
+COPY . /app
+
 RUN npm install
 
-COPY . ./
-
-CMD ["npm", "start"]
+ENTRYPOINT [ "npm" ]
