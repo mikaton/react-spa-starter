@@ -2,7 +2,7 @@
 
 Starter project I use when starting new React projects. Basically just create-react-app defaults with some folder structure I like to use and eslint/prettier set up with AirBnB rules. 
 
-## Run
+## Start
 `npm start`
 ## Build
 `npm build`
